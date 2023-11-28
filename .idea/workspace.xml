@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fdd8e3aa-650e-4800-9b29-e57f181a2e5f" name="Changes" comment="api接口初始模版创建">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/swagger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/create_table.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/post_es_mapping.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/MainApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/annotation/AuthCheck.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/aop/AuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/aop/LogInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/common/BaseResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/common/DeleteRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/common/ErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/common/PageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/common/ResultUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/config/CosClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/config/JsonConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/config/Knife4jConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/config/WxOpenConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/constant/CommonConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/constant/FileConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/constant/UserConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/FileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/InterfaceInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/PostController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/PostFavourController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/PostThumbController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/WxMpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/esdao/PostEsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/exception/ThrowUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/job/cycle/IncSyncPostToEs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/job/once/FullSyncPostToEs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/manager/CosManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/mapper/InterfaceInfoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/mapper/PostFavourMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/mapper/PostMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/mapper/PostThumbMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/file/UploadFileRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/interfaceInfo/InterfaceInfoAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/interfaceInfo/InterfaceInfoQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/interfaceInfo/InterfaceInfoUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/interfaceInfo/interfaceInfoEsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/post/PostAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/post/PostEditRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/post/PostEsDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/post/PostQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/post/PostUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/postfavour/PostFavourAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/postfavour/PostFavourQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/postthumb/PostThumbAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/user/UserAddRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/user/UserLoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/user/UserQueryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/user/UserRegisterRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/user/UserUpdateMyRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/dto/user/UserUpdateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/entity/InterfaceInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/entity/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/entity/PostFavour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/entity/PostThumb.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/enums/FileUploadBizEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/enums/InterfaceInfoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/enums/UserRoleEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/vo/InterfaceInfoVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/vo/LoginUserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/vo/PostVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/model/vo/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/InterfaceInfoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/PostFavourService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/PostService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/PostThumbService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/impl/InterfaceInfoServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/impl/PostFavourServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/impl/PostServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/impl/PostThumbServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/utils/NetUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/utils/SpringContextUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/utils/SqlUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/wxmp/WxMpConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/wxmp/WxMpMsgRouter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/wxmp/handler/EventHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/wxmp/handler/MessageHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/wxmp/handler/SubscribeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/InterfaceInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostFavourMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/PostThumbMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test_excel.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/MainApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/esdao/PostEsDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/manager/CosManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/mapper/PostFavourMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/mapper/PostMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/service/PostFavourServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/service/PostServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/service/PostThumbServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/service/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/imbzz/springbootinit/utils/EasyExcelTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/additional-spring-configuration-metadata.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/imbzz/springbootinit/annotation/AuthCheck.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/InterfaceInfoMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/PostFavourMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/PostMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/PostThumbMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test_excel.xlsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\JAVA\Maven\maven-repository" />
+        <option name="mavenHome" value="E:/JAVA/Maven/maven-vesion/apache-maven-3.9.0" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="E:\JAVA\Maven\maven-vesion\apache-maven-3.9.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2VtW6lZfR8cUcYSMiWJG8RbXYdO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/learnProject/星球项目集合/API开放平台/ZAPI-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.10253906",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "spring.configuration.checksum": "8b6cfe0720617fee198b78dd2e548837",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.imbzz.springbootinit.controller" />
+      <recent name="com.imbzz.springbootinit.service" />
+      <recent name="com.imbzz.springbootinit.service.impl" />
+      <recent name="com.imbzz.springbootinit.mapper" />
+      <recent name="com.imbzz.springbootinit.model.entity" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MainApplication (3)">
+    <configuration name="create_table.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$PROJECT_DIR$/sql/create_table.sql" />
+      <script-mode>FILE</script-mode>
+      <method v="2" />
+    </configuration>
+    <configuration name="MainApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ZAPI-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yupi.springbootinit.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication (2)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ZAPI-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zapi.springbootinit.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication (3)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="ZAPI-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.imbzz.springbootinit.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="springboot-init" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.yupi.springbootinit.MainApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Database Script.create_table.sql" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fdd8e3aa-650e-4800-9b29-e57f181a2e5f" name="Changes" comment="" />
+      <created>1695655684950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1695655684950</updated>
+      <workItem from="1695655686070" duration="878000" />
+      <workItem from="1696475743765" duration="2222000" />
+      <workItem from="1696765761762" duration="2606000" />
+      <workItem from="1697273034357" duration="806000" />
+      <workItem from="1697295929899" duration="1980000" />
+      <workItem from="1697329218621" duration="1713000" />
+      <workItem from="1697968009847" duration="1883000" />
+      <workItem from="1699586895936" duration="1647000" />
+      <workItem from="1699599233633" duration="2928000" />
+      <workItem from="1699776857084" duration="1017000" />
+      <workItem from="1699780277097" duration="2000" />
+      <workItem from="1699780284192" duration="8530000" />
+      <workItem from="1700052632426" duration="1087000" />
+      <workItem from="1700188005056" duration="1692000" />
+      <workItem from="1700278928805" duration="627000" />
+      <workItem from="1700292759182" duration="6615000" />
+      <workItem from="1700749115835" duration="5455000" />
+      <workItem from="1701142024771" duration="4540000" />
+      <workItem from="1701176508779" duration="67000" />
+      <workItem from="1701176626244" duration="695000" />
+      <workItem from="1701177628187" duration="260000" />
+    </task>
+    <task id="LOCAL-00001" summary="api接口初始模版创建">
+      <created>1701177217891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701177217891</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="api接口初始模版创建" />
+    <option name="LAST_COMMIT_MESSAGE" value="api接口初始模版创建" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/controller/InterfaceInfoController.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/imbzz/springbootinit/service/impl/InterfaceInfoServiceImpl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
