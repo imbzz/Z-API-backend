@@ -39,12 +39,12 @@ public class InterfaceInfoVO implements Serializable {
     /**
      * 请求头
      */
-    private String requestheader;
+    private String requestHeader;
 
     /**
      * 响应头
      */
-    private String responseheader;
+    private String responseHeader;
 
     /**
      * 接口状态（0-关闭,1-开启）
@@ -64,12 +64,12 @@ public class InterfaceInfoVO implements Serializable {
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
 
 }

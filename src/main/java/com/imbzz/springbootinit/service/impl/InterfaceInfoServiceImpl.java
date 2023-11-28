@@ -75,8 +75,8 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
 //            ThrowUtils.throwIf(userId == null || userId <= 0, ErrorCode.PARAMS_ERROR);
 //            ThrowUtils.throwIf(InterfaceInfoEnum.getEnumByValue(status) != null, ErrorCode.PARAMS_ERROR);
             ThrowUtils.throwIf(StringUtils.isAnyBlank(name, description, url, requestheader, responseheader, method), ErrorCode.PARAMS_ERROR);
-
         }
+        ThrowUtils.throwIf(StringUtils.isBlank(name) && name.length() > 50, ErrorCode.PARAMS_ERROR);
         if (!add) {
             ThrowUtils.throwIf(id == null || id <= 0, ErrorCode.PARAMS_ERROR);
         }
