@@ -1,24 +1,26 @@
 package com.imbzz.springbootinit.controller;
 
+import cn.hutool.json.JSONUtil;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.google.gson.Gson;
 import com.imbzz.springbootinit.annotation.AuthCheck;
-import com.imbzz.springbootinit.common.BaseResponse;
-import com.imbzz.springbootinit.common.DeleteRequest;
-import com.imbzz.springbootinit.common.ErrorCode;
-import com.imbzz.springbootinit.common.ResultUtils;
+import com.imbzz.springbootinit.common.*;
 import com.imbzz.springbootinit.constant.UserConstant;
 import com.imbzz.springbootinit.exception.BusinessException;
 import com.imbzz.springbootinit.exception.ThrowUtils;
 import com.imbzz.springbootinit.model.dto.interfaceInfo.InterfaceInfoAddRequest;
+import com.imbzz.springbootinit.model.dto.interfaceInfo.InterfaceInfoInvokeRequest;
 import com.imbzz.springbootinit.model.dto.interfaceInfo.InterfaceInfoQueryRequest;
 import com.imbzz.springbootinit.model.dto.interfaceInfo.InterfaceInfoUpdateRequest;
 import com.imbzz.springbootinit.model.entity.InterfaceInfo;
 import com.imbzz.springbootinit.model.entity.User;
+import com.imbzz.springbootinit.model.enums.isOpenEnum;
 import com.imbzz.springbootinit.model.vo.InterfaceInfoVO;
 import com.imbzz.springbootinit.service.InterfaceInfoService;
 import com.imbzz.springbootinit.service.UserService;
+import com.imbzz.zapiclientstarter.client.ZApiClient;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
- * 帖子接口
+ * 接口管理
  *
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
@@ -42,6 +44,9 @@ public class InterfaceInfoController {
 
     @Resource
     private UserService userService;
+
+    @Resource
+    private ZApiClient zApiClient;
 
     private final static Gson GSON = new Gson();
 
@@ -117,6 +122,127 @@ public class InterfaceInfoController {
         ThrowUtils.throwIf(oldInterfaceInfo == null, ErrorCode.NOT_FOUND_ERROR);
         boolean result = interfaceInfoService.updateById(interfaceInfo);
         return ResultUtils.success(result);
+    }
+
+
+
+
+    /**
+     * 上线接口（仅管理员）
+     *
+     * @param idRequest
+     * @return
+     */
+    @PostMapping("/onLine")
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    public BaseResponse<Boolean> onLineInterfaceInfo(@RequestBody IdRequest idRequest,HttpServletRequest request) {
+        if(idRequest == null || idRequest.getId() <= 0){
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        long id = idRequest.getId();
+        //1.校验接口是否是否存在
+        InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(idRequest.getId());
+        //2。根据id查询接口的信息
+        if (oldInterfaceInfo == null){
+            //3。如果为null 抛出异常
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        //4.判断接口是否可以调用
+        com.imbzz.zapiclientstarter.model.User user = new com.imbzz.zapiclientstarter.model.User();
+        //设置对象为test
+        user.setUserName("test");
+        //通过Post方法的getUserByPost方法传入user对象
+        String userNameByPost = zApiClient.getUserNameByPost(user);
+        //判断是否为null
+        if(StringUtils.isBlank(userNameByPost)){
+            throw new BusinessException(ErrorCode.SYSTEM_ERROR,"接口验证失败");
+        }
+        //创建一个InterfaceInfo对象
+        InterfaceInfo interfaceInfo = new InterfaceInfo();
+        //根据id获取设置状态
+        interfaceInfo.setId(id);
+        //修改状态
+        interfaceInfo.setStatus(isOpenEnum.OPEN.getValue());
+        //调用updateById 更新
+        boolean result = interfaceInfoService.updateById(interfaceInfo);
+        return ResultUtils.success(result);
+    }
+
+
+
+    /**
+     * 下线接口（仅管理员）
+     *
+     * @param idRequest
+     * @return
+     */
+    @PostMapping("/offLine")
+    @AuthCheck(mustRole = UserConstant.ADMIN_ROLE)
+    public BaseResponse<Boolean> offLineInterfaceInfo(@RequestBody IdRequest idRequest,HttpServletRequest request) {
+        if(idRequest == null || idRequest.getId() <= 0){
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        long id = idRequest.getId();
+        //1.校验接口是否是否存在
+        InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(idRequest.getId());
+        //2。根据id查询接口的信息
+        if (oldInterfaceInfo == null){
+            //3。如果为null 抛出异常
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        //创建一个InterfaceInfo对象
+        InterfaceInfo interfaceInfo = new InterfaceInfo();
+        //根据id获取设置状态
+        interfaceInfo.setId(id);
+        //修改状态
+        interfaceInfo.setStatus(isOpenEnum.CLOSE.getValue());
+        //调用updateById 更新
+        boolean result = interfaceInfoService.updateById(interfaceInfo);
+        return ResultUtils.success(result);
+    }
+
+    /**
+     * 测试调用接口(提供给用户测试)
+     *
+     * @param interfaceInfoInvokeRequest
+     * @param request
+     * @return
+     */
+    @PostMapping("/invoke")
+// 这里给它新封装一个参数InterfaceInfoInvokeRequest
+// 返回结果把对象发出去就好了，因为不确定接口的返回值到底是什么
+    public BaseResponse<Object> invokeInterfaceInfo(@RequestBody InterfaceInfoInvokeRequest interfaceInfoInvokeRequest,
+                                                    HttpServletRequest request) {
+        // 检查请求对象是否为空或者接口id是否小于等于0
+        if (interfaceInfoInvokeRequest == null || interfaceInfoInvokeRequest.getId() <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        // 获取接口id
+        long id = interfaceInfoInvokeRequest.getId();
+        // 获取用户请求参
+         String userRequestParams = interfaceInfoInvokeRequest.getUserRequestParams();
+        // 判断是否存在
+        InterfaceInfo oldInterfaceInfo = interfaceInfoService.getById(id);
+        if (oldInterfaceInfo == null) {
+            throw new BusinessException(ErrorCode.NOT_FOUND_ERROR);
+        }
+        // 检查接口状态是否为下线状态
+        if (oldInterfaceInfo.getStatus() == isOpenEnum.CLOSE.getValue()) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "接口已关闭");
+        }
+        //获取用户的accessKey 和 secretKey
+        User loginUser = userService.getLoginUser(request);
+        String accessKey = loginUser.getAccessKey();
+        String secretKey = loginUser.getSecretKey();
+        //解析传输过来的参数
+        Gson gson = new Gson();
+        com.imbzz.zapiclientstarter.model.User user = gson.fromJson(userRequestParams, com.imbzz.zapiclientstarter.model.User.class);
+        //创建zApiClient对象
+        ZApiClient zApiClientTemp = new ZApiClient(accessKey,secretKey);
+        //调用远程接口
+        String userNameByPost = zApiClientTemp.getUserNameByPost(user);
+        return ResultUtils.success(userNameByPost);
+
     }
 
     /**

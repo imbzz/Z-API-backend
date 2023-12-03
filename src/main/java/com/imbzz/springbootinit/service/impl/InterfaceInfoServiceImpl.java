@@ -94,8 +94,8 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         String name = interfaceInfoQueryRequest.getName();
         String description = interfaceInfoQueryRequest.getDescription();
         String url = interfaceInfoQueryRequest.getUrl();
-        String requestheader = interfaceInfoQueryRequest.getRequestheader();
-        String responseheader = interfaceInfoQueryRequest.getResponseheader();
+        String requestheader = interfaceInfoQueryRequest.getRequestHeader();
+        String responseheader = interfaceInfoQueryRequest.getResponseHeader();
         Integer status = interfaceInfoQueryRequest.getStatus();
         String method = interfaceInfoQueryRequest.getMethod();
         Long userId = interfaceInfoQueryRequest.getUserId();
@@ -213,7 +213,9 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
 
     @Override
     public InterfaceInfoVO getInterfaceInfoVO(InterfaceInfo interfaceInfo, HttpServletRequest request) {
-        return null;
+        InterfaceInfoVO interfaceInfoVO = new InterfaceInfoVO();
+        BeanUtils.copyProperties(interfaceInfo, interfaceInfoVO);
+        return interfaceInfoVO;
     }
 
     @Override

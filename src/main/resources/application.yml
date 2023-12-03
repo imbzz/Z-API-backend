@@ -90,3 +90,8 @@ cos:
     secretKey: xxx
     region: xxx
     bucket: xxx
+
+zapi:
+  client:
+    access-key: imbzz
+    secret-key: abcdef

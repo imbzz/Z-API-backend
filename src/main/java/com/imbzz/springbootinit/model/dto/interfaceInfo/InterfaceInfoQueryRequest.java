@@ -51,12 +51,12 @@ public class InterfaceInfoQueryRequest extends PageRequest implements Serializab
     /**
      * 请求头
      */
-    private String requestheader;
+    private String requestHeader;
 
     /**
      * 响应头
      */
-    private String responseheader;
+    private String responseHeader;
 
     /**
      * 接口状态（0-关闭,1-开启）
@@ -77,17 +77,17 @@ public class InterfaceInfoQueryRequest extends PageRequest implements Serializab
     /**
      * 创建时间
      */
-    private Date createtime;
+    private Date createTime;
 
     /**
      * 更新时间
      */
-    private Date updatetime;
+    private Date updateTime;
 
     /**
      * 是否删除（0-未删,1-已删）
      */
-    private Integer isdelete;
+    private Integer isDelete;
 
 
 }
