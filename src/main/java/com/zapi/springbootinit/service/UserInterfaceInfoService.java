@@ -1,7 +1,13 @@
 package com.zapi.springbootinit.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.zapi.springbootinit.model.dto.userinterfaceInfo.UserInterfaceInfoQueryRequest;
 import com.zapi.springbootinit.model.entity.UserInterfaceInfo;
+import com.zapi.springbootinit.model.vo.UserInterfaceInfoVO;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
 * @author 86188
@@ -10,4 +16,11 @@ import com.zapi.springbootinit.model.entity.UserInterfaceInfo;
 */
 public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
 
+    QueryWrapper<UserInterfaceInfo> getQueryWrapper(UserInterfaceInfoQueryRequest interfaceInfoQueryRequest);
+
+    Page<UserInterfaceInfoVO> getUserInterfaceInfoVOPage(Page<UserInterfaceInfo> interfaceInfoPage, HttpServletRequest request);
+
+    void validUserInterfaceInfo(UserInterfaceInfo interfaceInfo, boolean add);
+
+    UserInterfaceInfoVO getUserInterfaceInfoVO(UserInterfaceInfo interfaceInfo, HttpServletRequest request);
 }
