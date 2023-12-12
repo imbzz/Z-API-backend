@@ -1,14 +1,13 @@
 package com.zapi.springbootinit.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.github.xiaoymin.knife4j.core.util.CommonUtils;
-import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
+
 import com.zapi.springbootinit.common.ErrorCode;
 import com.zapi.springbootinit.constant.CommonConstant;
 import com.zapi.springbootinit.exception.BusinessException;
-import com.zapi.springbootinit.exception.ThrowUtils;
 import com.zapi.springbootinit.mapper.UserInterfaceInfoMapper;
 import com.zapi.springbootinit.model.dto.userinterfaceInfo.UserInterfaceInfoQueryRequest;
 import com.zapi.springbootinit.model.entity.UserInterfaceInfo;
@@ -95,6 +94,22 @@ public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoM
         UserInterfaceInfoVO userInterfaceInfoVO = new UserInterfaceInfoVO();
         BeanUtils.copyProperties(interfaceInfo, userInterfaceInfoVO);
         return userInterfaceInfoVO;
+    }
+
+
+    @Override
+    public boolean invokeCount(long interfaceInfoId, long userId) {
+        // 判断
+        if (interfaceInfoId <= 0 || userId <= 0) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        UpdateWrapper<UserInterfaceInfo> updateWrapper = new UpdateWrapper<>();
+        updateWrapper.eq("interfaceInfoId", interfaceInfoId);
+        updateWrapper.eq("userId", userId);
+
+//        updateWrapper.gt("leftNum", 0);
+        updateWrapper.setSql("leftNum = leftNum - 1, totalNum = totalNum + 1");
+        return this.update(updateWrapper);
     }
 }
 

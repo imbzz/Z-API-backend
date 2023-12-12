@@ -23,4 +23,6 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
     void validUserInterfaceInfo(UserInterfaceInfo interfaceInfo, boolean add);
 
     UserInterfaceInfoVO getUserInterfaceInfoVO(UserInterfaceInfo interfaceInfo, HttpServletRequest request);
+
+    boolean invokeCount(long interfaceInfoId, long userId);
 }

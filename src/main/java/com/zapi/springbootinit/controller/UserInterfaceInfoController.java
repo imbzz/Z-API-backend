@@ -33,9 +33,9 @@ import javax.servlet.http.HttpServletRequest;
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @RestController
-@RequestMapping("/interfaceInfo")
+@RequestMapping("/UserInterfaceInfo")
 @Slf4j
-public class UserUserInterfaceInfoController {
+public class UserInterfaceInfoController {
 
     @Resource
     private UserInterfaceInfoService interfaceInfoService;
