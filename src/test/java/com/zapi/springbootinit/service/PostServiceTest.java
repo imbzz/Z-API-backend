@@ -1,10 +1,11 @@
 package com.zapi.springbootinit.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zapi.springbootinit.model.dto.post.PostQueryRequest;
-import com.zapi.springbootinit.model.entity.Post;
+import com.project.model.dto.post.PostQueryRequest;
+import com.project.model.entity.Post;
 import javax.annotation.Resource;
 
+import com.project.service.PostService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

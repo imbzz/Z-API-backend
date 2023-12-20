@@ -1,9 +1,10 @@
 package com.zapi.springbootinit.esdao;
 
-import com.zapi.springbootinit.model.dto.post.PostEsDTO;
-import com.zapi.springbootinit.model.dto.post.PostQueryRequest;
-import com.zapi.springbootinit.model.entity.Post;
-import com.zapi.springbootinit.service.PostService;
+import com.project.esdao.PostEsDao;
+import com.project.model.dto.post.PostEsDTO;
+import com.project.model.dto.post.PostQueryRequest;
+import com.project.model.entity.Post;
+import com.project.service.PostService;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;

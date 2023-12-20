@@ -1,6 +1,7 @@
 package com.zapi.springbootinit.mapper;
 
-import com.zapi.springbootinit.model.entity.Post;
+import com.project.mapper.PostMapper;
+import com.project.model.entity.Post;
 import java.util.Date;
 import java.util.List;
 import javax.annotation.Resource;

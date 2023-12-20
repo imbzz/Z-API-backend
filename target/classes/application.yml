@@ -95,3 +95,17 @@ zapi:
   client:
     access-key: imbzz
     secret-key: abcdef
+
+# application.yml (Spring Boot)
+dubbo:
+  application:
+    # 设置应用的名称
+    name: dubbo-springboot-demo-provider
+  # 指定接口的协议,端口设置为-1表示随机可用
+  protocol:
+    name: dubbo
+    port: 22221
+    # 配置注册中心为Nocas ,使用的地址为nacos://localhost:8848
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
