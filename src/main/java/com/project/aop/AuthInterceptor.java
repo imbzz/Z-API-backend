@@ -3,11 +3,12 @@ package com.project.aop;
 import com.project.annotation.AuthCheck;
 import com.project.common.ErrorCode;
 import com.project.exception.BusinessException;
-import com.project.model.entity.User;
 import com.project.model.enums.UserRoleEnum;
 import com.project.service.UserService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+
+import com.zapi.zapicommon.model.entity.User;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

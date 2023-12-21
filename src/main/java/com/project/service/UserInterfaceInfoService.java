@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.project.model.dto.userinterfaceInfo.UserInterfaceInfoQueryRequest;
-import com.project.model.entity.UserInterfaceInfo;
 import com.project.model.vo.UserInterfaceInfoVO;
+import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -24,5 +24,11 @@ public interface UserInterfaceInfoService extends IService<UserInterfaceInfo> {
 
     UserInterfaceInfoVO getUserInterfaceInfoVO(UserInterfaceInfo interfaceInfo, HttpServletRequest request);
 
+    /**
+     * 调用次数+1
+     * @param interfaceInfoId
+     * @param userId
+     * @return
+     */
     boolean invokeCount(long interfaceInfoId, long userId);
 }

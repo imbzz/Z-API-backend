@@ -1,9 +1,9 @@
 package com.zapi.springbootinit.service;
 
-import com.project.model.entity.User;
 import javax.annotation.Resource;
 
 import com.project.service.PostThumbService;
+import com.zapi.zapicommon.model.entity.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

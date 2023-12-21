@@ -3,12 +3,12 @@ package com.project.service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.project.model.dto.user.UserQueryRequest;
-import com.project.model.entity.User;
 import com.project.model.vo.LoginUserVO;
 import com.project.model.vo.UserVO;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
+import com.zapi.zapicommon.model.entity.User;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 
 /**

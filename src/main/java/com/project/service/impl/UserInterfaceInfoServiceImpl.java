@@ -10,10 +10,10 @@ import com.project.constant.CommonConstant;
 import com.project.exception.BusinessException;
 import com.project.mapper.UserInterfaceInfoMapper;
 import com.project.model.dto.userinterfaceInfo.UserInterfaceInfoQueryRequest;
-import com.project.model.entity.UserInterfaceInfo;
 
 import com.project.model.vo.UserInterfaceInfoVO;
 import com.project.service.UserInterfaceInfoService;
+import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;

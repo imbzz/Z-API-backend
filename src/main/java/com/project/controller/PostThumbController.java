@@ -5,12 +5,12 @@ import com.project.common.ErrorCode;
 import com.project.common.ResultUtils;
 import com.project.exception.BusinessException;
 import com.project.model.dto.postthumb.PostThumbAddRequest;
-import com.project.model.entity.User;
 import com.project.service.PostThumbService;
 import com.project.service.UserService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.zapi.zapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

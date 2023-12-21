@@ -2,7 +2,7 @@ package com.project.service;
 
 import com.project.model.entity.PostThumb;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.project.model.entity.User;
+import com.zapi.zapicommon.model.entity.User;
 
 /**
  * 帖子点赞服务

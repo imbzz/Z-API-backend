@@ -23,4 +23,9 @@ class MainApplicationTests {
         System.out.println(wxOpenConfig);
     }
 
+    @Test
+    void test() {
+        System.out.println("运行");
+    }
+
 }

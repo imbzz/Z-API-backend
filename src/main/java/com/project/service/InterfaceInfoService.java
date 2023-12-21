@@ -4,8 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.project.model.dto.interfaceInfo.InterfaceInfoQueryRequest;
-import com.project.model.entity.InterfaceInfo;
 import com.project.model.vo.InterfaceInfoVO;
+import com.zapi.zapicommon.model.entity.InterfaceInfo;
 
 import javax.servlet.http.HttpServletRequest;
 

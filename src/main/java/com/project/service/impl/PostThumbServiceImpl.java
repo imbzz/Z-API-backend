@@ -7,12 +7,12 @@ import com.project.exception.BusinessException;
 import com.project.mapper.PostThumbMapper;
 import com.project.model.entity.Post;
 import com.project.model.entity.PostThumb;
-import com.project.model.entity.User;
 import com.project.service.PostService;
 import com.project.service.PostThumbService;
 
 import javax.annotation.Resource;
 
+import com.zapi.zapicommon.model.entity.User;
 import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

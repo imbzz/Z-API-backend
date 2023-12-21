@@ -12,7 +12,6 @@ import com.project.constant.CommonConstant;
 import com.project.exception.BusinessException;
 import com.project.mapper.UserMapper;
 import com.project.model.dto.user.UserQueryRequest;
-import com.project.model.entity.User;
 import com.project.model.enums.UserRoleEnum;
 import com.project.model.vo.LoginUserVO;
 import com.project.model.vo.UserVO;
@@ -23,6 +22,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletRequest;
 
+import com.zapi.zapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import org.apache.commons.lang3.StringUtils;

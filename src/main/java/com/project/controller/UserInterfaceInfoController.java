@@ -15,12 +15,12 @@ import com.project.exception.ThrowUtils;
 import com.project.model.dto.userinterfaceInfo.UserInterfaceInfoAddRequest;
 import com.project.model.dto.userinterfaceInfo.UserInterfaceInfoQueryRequest;
 import com.project.model.dto.userinterfaceInfo.UserInterfaceInfoUpdateRequest;
-import com.project.model.entity.UserInterfaceInfo;
-import com.project.model.entity.User;
 
 import com.project.model.vo.UserInterfaceInfoVO;
 import com.project.service.UserInterfaceInfoService;
 import com.project.service.UserService;
+import com.zapi.zapicommon.model.entity.User;
+import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;

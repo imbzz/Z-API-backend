@@ -8,7 +8,6 @@ import com.project.constant.FileConstant;
 import com.project.exception.BusinessException;
 import com.project.manager.CosManager;
 import com.project.model.dto.file.UploadFileRequest;
-import com.project.model.entity.User;
 import com.project.model.enums.FileUploadBizEnum;
 import com.project.service.UserService;
 import java.io.File;
@@ -16,6 +15,7 @@ import java.util.Arrays;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.zapi.zapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.web.bind.annotation.PostMapping;

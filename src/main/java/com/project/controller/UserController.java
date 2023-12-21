@@ -16,7 +16,6 @@ import com.project.model.dto.user.UserQueryRequest;
 import com.project.model.dto.user.UserRegisterRequest;
 import com.project.model.dto.user.UserUpdateMyRequest;
 import com.project.model.dto.user.UserUpdateRequest;
-import com.project.model.entity.User;
 import com.project.model.vo.LoginUserVO;
 import com.project.model.vo.UserVO;
 import com.project.service.UserService;
@@ -25,6 +24,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.zapi.zapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 import me.chanjar.weixin.common.bean.oauth2.WxOAuth2AccessToken;

@@ -16,7 +16,6 @@ import com.project.model.dto.post.PostQueryRequest;
 import com.project.model.entity.Post;
 import com.project.model.entity.PostFavour;
 import com.project.model.entity.PostThumb;
-import com.project.model.entity.User;
 import com.project.model.vo.PostVO;
 import com.project.model.vo.UserVO;
 import com.project.service.PostService;
@@ -31,6 +30,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import com.zapi.zapicommon.model.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.ObjectUtils;
