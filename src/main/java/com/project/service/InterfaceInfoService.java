@@ -6,8 +6,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.project.model.dto.interfaceInfo.InterfaceInfoQueryRequest;
 import com.project.model.vo.InterfaceInfoVO;
 import com.zapi.zapicommon.model.entity.InterfaceInfo;
+import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 
 /**
@@ -24,4 +26,5 @@ public interface InterfaceInfoService extends IService<InterfaceInfo> {
     InterfaceInfoVO getInterfaceInfoVO(InterfaceInfo interfaceInfo, HttpServletRequest request);
 
     Page<InterfaceInfoVO> getInterfaceInfoVOPage(Page<InterfaceInfo> interfaceInfoPage, HttpServletRequest request);
+
 }

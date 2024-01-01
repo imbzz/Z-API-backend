@@ -14,6 +14,7 @@ import com.project.service.InterfaceInfoService;
 import com.project.service.UserService;
 import com.project.utils.SqlUtils;
 import com.zapi.zapicommon.model.entity.InterfaceInfo;
+import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -220,6 +221,8 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
         interfaceInfoListPage.setRecords(collect);
         return interfaceInfoListPage;
     }
+
+
 }
 
 

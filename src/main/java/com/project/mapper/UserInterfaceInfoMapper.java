@@ -1,7 +1,10 @@
 package com.project.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.zapi.zapicommon.model.entity.InterfaceInfo;
 import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
+
+import java.util.List;
 
 /**
 * @author 86188
@@ -10,6 +13,13 @@ import com.zapi.zapicommon.model.entity.UserInterfaceInfo;
 * @Entity com.entity.model.springbootinit.zapi.UserInterfaceInfo
 */
 public interface UserInterfaceInfoMapper extends BaseMapper<UserInterfaceInfo> {
+
+//    select interfaceInfoId, sum(totalNum) as totalNum
+//    from user_interface_info
+//    group by interfaceInfoId
+//    order by totalNum desc
+//    limit 3;
+    List<UserInterfaceInfo> listTopInvokeInterfaceInfo(int limit);
 
 }
 
